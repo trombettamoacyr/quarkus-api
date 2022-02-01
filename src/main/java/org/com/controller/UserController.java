@@ -1,8 +1,8 @@
 package org.com.controller;
 
-import org.com.controller.request.UserRequest;
-import org.com.entity.UserEntity;
-import org.com.services.UserService;
+import org.com.controller.request.CarRequest;
+import org.com.services.entity.CarEntity;
+import org.com.services.CarService;
 
 import javax.inject.Inject;
 import javax.ws.rs.Produces;
@@ -14,28 +14,28 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 import java.util.UUID;
 
-@Path("/users")
+@Path("/cars")
 public class UserController {
 
     @Inject
-    UserService userService;
+    CarService carService;
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public UserEntity create(UserRequest userRequest) {
-        return userService.create(userRequest);
+    public CarEntity create(CarRequest carRequest) {
+        return carService.create(carRequest);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<UserEntity> findAllUsers() {
-        return userService.findAll();
+    public List<CarEntity> findAllCars() {
+        return carService.findAll();
     }
 
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public UserEntity findById(@PathParam("id") UUID id) {
-        return userService.findById(id);
+    public CarEntity findById(@PathParam("id") UUID id) {
+        return carService.findById(id);
     }
 }
