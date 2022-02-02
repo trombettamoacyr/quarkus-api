@@ -1,7 +1,7 @@
 package org.com.controller;
 
 import org.com.controller.request.CarRequest;
-import org.com.services.entity.CarEntity;
+import org.com.entity.CarEntity;
 import org.com.services.CarService;
 
 import javax.inject.Inject;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Path("/cars")
-public class UserController {
+public class CarController {
 
     @Inject
     CarService carService;

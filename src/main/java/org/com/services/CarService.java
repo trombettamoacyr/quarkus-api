@@ -1,7 +1,7 @@
 package org.com.services;
 
 import org.com.controller.request.CarRequest;
-import org.com.services.entity.CarEntity;
+import org.com.entity.CarEntity;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;

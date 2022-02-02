@@ -1,4 +1,4 @@
-package org.com.services.entity;
+package org.com.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
